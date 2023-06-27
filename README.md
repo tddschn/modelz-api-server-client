@@ -21,8 +21,7 @@ client = AuthenticatedClient(
     base_url="https://api.example.com", token=api_key)
 
 # For the JWT token
-# client = AuthenticatedClient(
-    base_url="https://api.example.com", token=jwt_token, auth_header_name="JWT")
+# client = AuthenticatedClient(base_url="https://api.example.com", token=jwt_token, auth_header_name="JWT")
 
 ```
 
