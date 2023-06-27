@@ -43,6 +43,7 @@ class GithubComTensorchordModelzApiserverApiTypesDeploymentSpec:
         startup_duration (Union[Unset, int]): StartupDuration is the startup timeout.
         target_load (Union[Unset, int]): TargetLoad is the target load of the deployment. (inflight requests per
             replica)
+        template_id (Union[Unset, str]): TemplateID is the template ID of the deployment.
         zero_duration (Union[Unset, int]): ZeroDuration is the idle timeout before scaling to zero.
     """
 
@@ -60,6 +61,7 @@ class GithubComTensorchordModelzApiserverApiTypesDeploymentSpec:
     spot_instance: Union[Unset, bool] = UNSET
     startup_duration: Union[Unset, int] = UNSET
     target_load: Union[Unset, int] = UNSET
+    template_id: Union[Unset, str] = UNSET
     zero_duration: Union[Unset, int] = UNSET
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
@@ -93,6 +95,7 @@ class GithubComTensorchordModelzApiserverApiTypesDeploymentSpec:
         spot_instance = self.spot_instance
         startup_duration = self.startup_duration
         target_load = self.target_load
+        template_id = self.template_id
         zero_duration = self.zero_duration
 
         field_dict: Dict[str, Any] = {}
@@ -126,6 +129,8 @@ class GithubComTensorchordModelzApiserverApiTypesDeploymentSpec:
             field_dict["startup_duration"] = startup_duration
         if target_load is not UNSET:
             field_dict["target_load"] = target_load
+        if template_id is not UNSET:
+            field_dict["templateId"] = template_id
         if zero_duration is not UNSET:
             field_dict["zero_duration"] = zero_duration
 
@@ -191,6 +196,8 @@ class GithubComTensorchordModelzApiserverApiTypesDeploymentSpec:
 
         target_load = d.pop("target_load", UNSET)
 
+        template_id = d.pop("templateId", UNSET)
+
         zero_duration = d.pop("zero_duration", UNSET)
 
         github_com_tensorchord_modelz_apiserver_api_types_deployment_spec = cls(
@@ -208,6 +215,7 @@ class GithubComTensorchordModelzApiserverApiTypesDeploymentSpec:
             spot_instance=spot_instance,
             startup_duration=startup_duration,
             target_load=target_load,
+            template_id=template_id,
             zero_duration=zero_duration,
         )
 
